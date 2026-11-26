@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -8,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
 :root{--wine:#280b18;--wine2:#451326;--gold:#d8b56b;--gold2:#f2dfa9;--cream:#f8f0df}
 *{box-sizing:border-box}
@@ -47,17 +49,27 @@ h1.brand{font-size:clamp(42px,10vw,70px);line-height:1.35;color:var(--gold2);mar
 .detail strong{font-weight:500}
 .manager{margin:27px 0 5px;color:var(--gold2);font-size:17px}
 .manager span{display:block;font-size:12px;color:#d9bd8b;margin-bottom:4px}
-.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:11px;margin-top:25px}
-.action{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;padding:11px 20px;min-width:165px;border:1px solid var(--gold);color:var(--gold2);font:500 14px 'Vazirmatn';background:#ffffff08}
+
+.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin:28px auto 10px}
+.action{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;padding:13px 19px;min-width:175px;border:1px solid var(--gold);color:var(--gold2);font:500 14px 'Vazirmatn';background:#ffffff08;transition:.25s}
+.action:hover{background:#ffffff18;transform:translateY(-2px)}
 .action.primary{background:linear-gradient(135deg,#f0d99c,#b88b43);color:#32101e}
+.action-icon{font-size:18px}
+
 .footer{margin-top:30px;color:#d8bd8c;font-size:12px;letter-spacing:1px}
 .music{position:fixed;z-index:5;bottom:18px;left:18px;width:48px;height:48px;border-radius:50%;border:1px solid var(--gold);background:#351020;color:var(--gold2);font-size:20px;cursor:pointer;box-shadow:0 5px 20px #0006;display:none}
 .music.show{display:block}
+
+@media(max-width:480px){
+.action{width:100%;max-width:290px}
+}
 @media(min-width:700px){main{margin-top:45px}.invite{min-height:850px;display:grid;align-items:center}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
+
 <body>
+
 <section class="entry" id="entry" aria-label="ورود به دعوت‌نامه">
   <div class="entry-card">
     <div class="mini">به نام زیبایی و شکوه هنر ایرانی</div>
@@ -71,41 +83,91 @@ h1.brand{font-size:clamp(42px,10vw,70px);line-height:1.35;color:var(--gold2);mar
 <main id="main">
   <article class="invite">
     <div class="content">
+
       <div class="top-ornament">❖ ✦ ❖</div>
       <div class="kicker">دعوت‌نامه رسمی افتتاحیه</div>
       <h1 class="brand">فرش پازیریک</h1>
       <p class="branch">افتتاحیه شعبه سوم · نورآباد ممسنی</p>
+
       <div class="rule"></div>
+
       <p class="invite-text">
         به نام هنر، اصالت و زیبایی<br>
         خرسندیم آغاز فصلی تازه از همراهی را جشن بگیریم.<br>
         حضور ارزشمند شما،<br>
         <strong>شکوه‌بخش محفل افتتاحیه ما خواهد بود.</strong>
       </p>
+
       <div class="date">
         <div class="day">دوشنبه · ۹ آذر ۱۴۰۵</div>
         <div class="time">ساعت ۱۶ الی ۱۸</div>
       </div>
+
       <div class="details">
-        <div class="detail"><span class="symbol">⌖</span><div><small>نشانی مراسم</small><strong>نورآباد ممسنی، خیابان طالقانی، روبه‌روی پست بانک</strong></div></div>
-        <div class="detail"><span class="symbol">◷</span><div><small>زمان برگزاری</small><strong>دوشنبه، از ساعت ۱۶ تا ۱۸</strong></div></div>
+        <div class="detail">
+          <span class="symbol">⌖</span>
+          <div>
+            <small>نشانی مراسم</small>
+            <strong>نورآباد ممسنی، خیابان طالقانی، روبه‌روی پست بانک</strong>
+          </div>
+        </div>
+
+        <div class="detail">
+          <span class="symbol">◷</span>
+          <div>
+            <small>زمان برگزاری</small>
+            <strong>دوشنبه، از ساعت ۱۶ تا ۱۸</strong>
+          </div>
+        </div>
       </div>
-      <div class="manager"><span>با مدیریت</span>حمید زارع</div>
+
+      <div class="manager">
+        <span>با مدیریت</span>
+        حمید زارع
+      </div>
+
       <div class="rule"></div>
+
+      <!-- دکمه های ارتباطی -->
       <div class="actions">
-        <a class="action primary" href="https://www.google.com/maps/search/?api=1&query=نورآباد+ممسنی+خیابان+طالقانی+روبه‌روی+پست+بانک" target="_blank" rel="noopener">مسیریابی مراسم ↗</a>
-        <a class="action" href="https://www.google.com/maps/search/?api=1&query=نورآباد+ممسنی+خیابان+طالقانی+روبه‌روی+پست+بانک" target="_blank" rel="noopener">مشاهده نشانی</a>
+
+        <a class="action primary"
+           href="https://maps.app.goo.gl/cQJn5rmCar4Cyamf7"
+           target="_blank"
+           rel="noopener">
+          <span class="action-icon">📍</span>
+          مسیریابی مراسم
+        </a>
+
+        <a class="action"
+           href="https://instagram.com/Pazirik_mamasani"
+           target="_blank"
+           rel="noopener">
+          <span class="action-icon">◎</span>
+          صفحه اینستاگرام
+        </a>
+
+        <a class="action"
+           href="tel:09176894019">
+          <span class="action-icon">☎</span>
+          تماس با ما
+        </a>
+
       </div>
+
       <div class="footer">منتظر دیدار گرمتان هستیم</div>
       <div class="top-ornament" style="margin-top:18px">❖ ✦ ❖</div>
+
     </div>
   </article>
 </main>
 
 <button class="music" id="musicBtn" aria-label="پخش یا توقف موسیقی" title="موسیقی">♫</button>
+
 <audio id="bgMusic" preload="auto" loop>
   <source src="unknown_artist_godfather_instrumenal.mp3" type="audio/mpeg">
 </audio>
+
 <script>
 const entry = document.getElementById('entry');
 const main = document.getElementById('main');
@@ -117,6 +179,7 @@ document.getElementById('enterBtn').addEventListener('click', async () => {
   entry.classList.add('hidden');
   main.classList.add('visible');
   musicBtn.classList.add('show');
+
   try {
     await audio.play();
     playing = true;
@@ -146,8 +209,19 @@ musicBtn.addEventListener('click', async () => {
     }
   }
 });
-audio.addEventListener('pause', () => { if (!audio.ended) { playing = false; musicBtn.textContent = '▶'; } });
-audio.addEventListener('play', () => { playing = true; musicBtn.textContent = '♫'; });
+
+audio.addEventListener('pause', () => {
+  if (!audio.ended) {
+    playing = false;
+    musicBtn.textContent = '▶';
+  }
+});
+
+audio.addEventListener('play', () => {
+  playing = true;
+  musicBtn.textContent = '♫';
+});
 </script>
+
 </body>
 </html>

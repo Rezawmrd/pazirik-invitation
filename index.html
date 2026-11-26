@@ -104,7 +104,7 @@ body{
 
 .enter:active{transform:scale(.98)}
 
-/* صفحه دعوت‌نامه با تصویر واقعی فرش */
+/* صفحه دعوت‌نامه */
 main{
  width:min(650px,calc(100% - 24px));
  margin:28px auto 34px;
@@ -125,13 +125,10 @@ main.visible{
  padding:clamp(35px,6vw,65px) clamp(18px,5vw,45px);
  border:3px solid #d8b56b;
  background-color:#650d22;
-
- /* تصویر فرش پازیریک */
  background-image:url('728e0237-643e-4708-bdcc-ef0ac56b3622.jpg');
  background-size:100% 100%;
  background-position:center;
  background-repeat:no-repeat;
-
  box-shadow:
  0 0 0 3px #4c0b1b,
  0 0 0 5px #d8b56b,
@@ -148,7 +145,7 @@ main.visible{
  z-index:2;
 }
 
-/* محتوای روی قسمت قرمز فرش */
+/* محتوای روی فرش */
 .content{
  position:relative;
  z-index:1;
@@ -234,6 +231,7 @@ h1.brand{
  color:#fff2dc;
 }
 
+/* اطلاعات مراسم */
 .details{
  display:grid;
  gap:10px;
@@ -271,6 +269,7 @@ h1.brand{
  font-size:14px;
 }
 
+/* مدیریت */
 .manager{
  margin:23px 0 5px;
  color:#ffe3a3;
@@ -285,26 +284,28 @@ h1.brand{
  margin-bottom:4px;
 }
 
-/* دکمه های ارتباطی */
+/* سه دکمه در یک ردیف */
 .actions{
- display:flex;
- justify-content:center;
- flex-wrap:wrap;
- gap:10px;
- margin:24px auto 8px;
+ display:grid;
+ grid-template-columns:repeat(3,minmax(0,1fr));
+ gap:7px;
+ margin:18px auto 8px;
+ max-width:440px;
 }
 
 .action{
- display:inline-flex;
+ display:flex;
  align-items:center;
  justify-content:center;
- gap:8px;
+ flex-direction:column;
+ gap:4px;
  text-decoration:none;
- padding:11px 15px;
- min-width:160px;
- border:1px solid var(--gold2);
- color:#fff0d0;
- font:500 13px 'Vazirmatn';
+ padding:9px 3px;
+ min-width:0;
+ white-space:nowrap;
+ border:1px solid var(--gold);
+ color:var(--gold2);
+ font:500 11px 'Vazirmatn';
  background:rgba(45,5,15,.88);
  transition:.25s;
  box-shadow:0 4px 12px #0005;
@@ -321,7 +322,9 @@ h1.brand{
  color:#32101e;
 }
 
-.action-icon{font-size:17px}
+.action-icon{
+ font-size:17px;
+}
 
 .footer{
  margin-top:23px;
@@ -351,25 +354,54 @@ h1.brand{
 
 .music.show{display:block}
 
+/* موبایل */
 @media(max-width:480px){
- main{width:calc(100% - 16px)}
- .invite{padding:27px 12px}
- .content{padding:21px 10px}
- .action{width:100%;max-width:270px}
- .detail{padding:9px 8px}
- .detail strong{font-size:13px}
- .branch{font-size:14px}
- .date .day{font-size:17px}
+ main{
+  width:calc(100% - 16px);
+ }
+
+ .invite{
+  padding:27px 12px;
+ }
+
+ .content{
+  padding:21px 10px;
+ }
+
+ .action{
+  padding:9px 2px;
+  font-size:10px;
+ }
+
+ .detail{
+  padding:9px 8px;
+ }
+
+ .detail strong{
+  font-size:13px;
+ }
+
+ .branch{
+  font-size:14px;
+ }
+
+ .date .day{
+  font-size:17px;
+ }
 }
 
 @media(prefers-reduced-motion:reduce){
- *{transition:none!important;scroll-behavior:auto!important}
+ *{
+  transition:none!important;
+  scroll-behavior:auto!important;
+ }
 }
 </style>
 </head>
 
 <body>
 
+<!-- صفحه ورود -->
 <section class="entry" id="entry" aria-label="ورود به دعوت‌نامه">
  <div class="entry-card">
   <div class="mini">به نام زیبایی و شکوه هنر ایرانی</div>
@@ -383,13 +415,17 @@ h1.brand{
  </div>
 </section>
 
+<!-- دعوت‌نامه اصلی -->
 <main id="main">
  <article class="invite">
   <div class="content">
 
    <div class="top-ornament">❖ ✦ ❖</div>
+
    <div class="kicker">دعوت‌نامه رسمی افتتاحیه</div>
+
    <h1 class="brand">فرش پازیریک</h1>
+
    <p class="branch">افتتاحیه شعبه سوم · نورآباد ممسنی</p>
 
    <div class="rule"></div>
@@ -407,6 +443,7 @@ h1.brand{
    </div>
 
    <div class="details">
+
     <div class="detail">
      <span class="symbol">⌖</span>
      <div>
@@ -422,6 +459,7 @@ h1.brand{
       <strong>دوشنبه، از ساعت ۱۶ تا ۱۸</strong>
      </div>
     </div>
+
    </div>
 
    <div class="manager">
@@ -431,6 +469,7 @@ h1.brand{
 
    <div class="rule"></div>
 
+   <!-- دکمه های ارتباطی در یک ردیف -->
    <div class="actions">
 
     <a class="action primary"
@@ -438,7 +477,7 @@ h1.brand{
        target="_blank"
        rel="noopener">
      <span class="action-icon">📍</span>
-     مسیریابی مراسم
+     مسیریابی
     </a>
 
     <a class="action"
@@ -446,24 +485,26 @@ h1.brand{
        target="_blank"
        rel="noopener">
      <span class="action-icon">◎</span>
-     صفحه اینستاگرام
+     اینستاگرام
     </a>
 
     <a class="action"
        href="tel:09176894019">
      <span class="action-icon">☎</span>
-     تماس با ما
+     تماس
     </a>
 
    </div>
 
    <div class="footer">منتظر دیدار گرمتان هستیم</div>
+
    <div class="top-ornament" style="margin-top:15px">❖ ✦ ❖</div>
 
   </div>
  </article>
 </main>
 
+<!-- دکمه موسیقی -->
 <button class="music" id="musicBtn" aria-label="پخش یا توقف موسیقی" title="موسیقی">♫</button>
 
 <audio id="bgMusic" preload="auto" loop>

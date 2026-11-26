@@ -1,77 +1,153 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#350d17">
-<title>دعوت‌نامه افتتاحیه | فرش پازیریک</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#280b18">
+<title>دعوت‌نامه افتتاحیه فرش پازیریک</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
-:root{--wine:#350d17;--wine2:#571526;--gold:#d8b66d;--cream:#f6eddb;--muted:#ddcba7}
+:root{--wine:#280b18;--wine2:#451326;--gold:#d8b56b;--gold2:#f2dfa9;--cream:#f8f0df}
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 20%,#70243a 0,#350d17 48%,#18070d 100%);color:var(--cream);font-family:Vazirmatn,Tahoma,sans-serif;display:grid;place-items:center;padding:22px;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:10px;border:1px solid rgba(216,182,109,.42);pointer-events:none}
-body:after{content:"";position:fixed;inset:17px;border:1px solid rgba(216,182,109,.17);pointer-events:none}
-.card{width:min(100%,520px);position:relative;padding:14px;border:1px solid rgba(216,182,109,.65);background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(0,0,0,.13));box-shadow:0 24px 80px #09030799}
-.inner{position:relative;text-align:center;padding:42px 24px 34px;border:1px solid rgba(216,182,109,.35);overflow:hidden;background:linear-gradient(180deg,rgba(71,15,32,.68),rgba(30,7,15,.55))}
-.inner:before,.inner:after{content:"❖";position:absolute;color:rgba(216,182,109,.18);font-size:110px;line-height:1}
-.inner:before{top:-28px;right:-20px}.inner:after{bottom:-36px;left:-18px}
-.ornament{color:var(--gold);font-size:24px;letter-spacing:9px;margin:0 0 16px}
-.kicker{font-size:12px;letter-spacing:2px;color:var(--muted);font-weight:300}
-h1{font-size:clamp(34px,9vw,54px);line-height:1.35;margin:8px 0 2px;color:var(--gold);font-weight:800;text-shadow:0 3px 20px #0008}
-.subtitle{font-size:19px;color:var(--cream);font-weight:500;margin:0 0 20px}
-.rule{height:1px;width:74%;margin:22px auto;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-.invite{font-size:15px;line-height:2.2;color:#f1e4ce;max-width:350px;margin:0 auto}
-.branch{font-size:21px;font-weight:700;color:var(--gold);margin:8px 0}
-.date{display:inline-block;margin:15px auto 4px;padding:10px 24px;border:1px solid rgba(216,182,109,.72);color:var(--gold);font-size:19px;font-weight:700}
-.time{font-size:15px;color:var(--cream);margin:5px 0 18px}
-.details{font-size:14px;line-height:2.2;color:var(--muted);margin:10px auto 0}
-.manager{font-size:17px;color:var(--cream);font-weight:600;margin:12px 0}
-.address{font-size:13px;color:var(--muted);margin:5px auto 18px;line-height:2}
-.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
-a,.music{font:inherit;text-decoration:none;border:1px solid var(--gold);border-radius:3px;padding:10px 18px;color:var(--wine);background:var(--gold);font-size:13px;font-weight:700;cursor:pointer}
-.music{background:transparent;color:var(--gold)}
-.foot{font-size:11px;color:#c7ad7b;margin-top:25px;letter-spacing:1px}
-.corner{position:absolute;width:25px;height:25px;border-color:var(--gold);opacity:.8}
-.tl{top:9px;left:9px;border-top:1px solid;border-left:1px solid}.tr{top:9px;right:9px;border-top:1px solid;border-right:1px solid}.bl{bottom:9px;left:9px;border-bottom:1px solid;border-left:1px solid}.br{bottom:9px;right:9px;border-bottom:1px solid;border-right:1px solid}
-.reveal{animation:appear 1.2s ease both}
-@keyframes appear{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
-@media(max-width:420px){body{padding:18px}.inner{padding:34px 16px 28px}.invite{font-size:14px}.date{font-size:17px}}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--wine);color:var(--cream);font-family:'Vazirmatn',Tahoma,sans-serif;min-height:100vh}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:repeating-linear-gradient(45deg,transparent 0 17px,rgba(216,181,107,.18) 18px 19px,transparent 20px 36px),repeating-linear-gradient(-45deg,transparent 0 17px,rgba(216,181,107,.12) 18px 19px,transparent 20px 36px);mask-image:linear-gradient(to bottom,black,transparent 90%)}
+.entry{position:fixed;z-index:10;inset:0;display:grid;place-items:center;padding:24px;background:radial-gradient(ellipse at center,#5a2035 0%,#280b18 65%,#170610 100%);transition:opacity .9s ease,visibility .9s ease}
+.entry.hidden{opacity:0;visibility:hidden;pointer-events:none}
+.entry-card{width:min(440px,100%);text-align:center;padding:42px 25px;border:1px solid rgba(216,181,107,.75);outline:1px solid rgba(216,181,107,.25);outline-offset:8px;position:relative}
+.entry-card:before,.entry-card:after{content:"✦";position:absolute;color:var(--gold);font-size:25px;left:50%;transform:translateX(-50%)}
+.entry-card:before{top:-17px}.entry-card:after{bottom:-17px}
+.mini{color:var(--gold2);letter-spacing:3px;font-size:12px}
+.entry h1{font-size:clamp(34px,9vw,48px);font-weight:700;color:var(--gold2);margin:16px 0 8px}
+.entry p{font-weight:300;line-height:2;margin:8px 0 26px;color:#f5e8d0}
+.enter{border:1px solid var(--gold);background:linear-gradient(135deg,#f0d99c,#b88b43);color:#32101e;border-radius:2px;padding:13px 30px;font:600 15px 'Vazirmatn';cursor:pointer;box-shadow:0 7px 25px #10030a66}
+.enter:active{transform:scale(.98)}
+main{width:min(760px,calc(100% - 28px));margin:28px auto 34px;opacity:0;transform:translateY(18px);transition:opacity 1s ease,transform 1s ease}
+main.visible{opacity:1;transform:none}
+.invite{position:relative;overflow:hidden;text-align:center;padding:clamp(30px,7vw,64px) clamp(20px,6vw,56px);border:1px solid var(--gold);background:linear-gradient(160deg,rgba(85,31,52,.96),rgba(35,8,20,.98) 70%);box-shadow:0 25px 70px #10030a88}
+.invite:before{content:"";position:absolute;inset:9px;border:1px solid rgba(216,181,107,.35);pointer-events:none}
+.invite:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.2;background:repeating-linear-gradient(90deg,transparent 0 42px,rgba(216,181,107,.12) 43px 44px,transparent 45px 86px)}
+.content{position:relative;z-index:1}
+.top-ornament{color:var(--gold);font-size:31px;letter-spacing:8px;margin-bottom:12px}
+.kicker{font-size:13px;color:var(--gold2);letter-spacing:2px}
+h1.brand{font-size:clamp(42px,10vw,70px);line-height:1.35;color:var(--gold2);margin:8px 0 0;font-weight:800;text-shadow:0 3px 22px #0006}
+.branch{font-size:17px;color:#f5e7d0;margin:0 0 25px}
+.rule{height:1px;width:min(270px,75%);margin:24px auto;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.invite-text{font-size:clamp(16px,4vw,19px);line-height:2.35;font-weight:300;margin:18px auto;max-width:530px}
+.invite-text strong{color:var(--gold2);font-weight:600}
+.date{margin:28px auto 22px;padding:17px 10px;border-top:1px solid #d8b56b77;border-bottom:1px solid #d8b56b77;width:min(390px,100%)}
+.date .day{font-size:20px;color:var(--gold2);font-weight:600}
+.date .time{font-size:16px;margin-top:5px}
+.details{display:grid;gap:12px;margin:26px auto;max-width:520px;text-align:right}
+.detail{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;background:#ffffff08;border:1px solid #d8b56b30;line-height:1.9}
+.symbol{color:var(--gold);font-size:19px;min-width:24px;text-align:center}
+.detail small{display:block;color:#d9bd8b;font-size:12px}
+.detail strong{font-weight:500}
+.manager{margin:27px 0 5px;color:var(--gold2);font-size:17px}
+.manager span{display:block;font-size:12px;color:#d9bd8b;margin-bottom:4px}
+.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:11px;margin-top:25px}
+.action{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;padding:11px 20px;min-width:165px;border:1px solid var(--gold);color:var(--gold2);font:500 14px 'Vazirmatn';background:#ffffff08}
+.action.primary{background:linear-gradient(135deg,#f0d99c,#b88b43);color:#32101e}
+.footer{margin-top:30px;color:#d8bd8c;font-size:12px;letter-spacing:1px}
+.music{position:fixed;z-index:5;bottom:18px;left:18px;width:48px;height:48px;border-radius:50%;border:1px solid var(--gold);background:#351020;color:var(--gold2);font-size:20px;cursor:pointer;box-shadow:0 5px 20px #0006;display:none}
+.music.show{display:block}
+@media(min-width:700px){main{margin-top:45px}.invite{min-height:850px;display:grid;align-items:center}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<main class="card reveal">
-  <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
-  <section class="inner">
-    <div class="ornament">✧ ❖ ✧</div>
-    <div class="kicker">دعوت‌نامه رسمی</div>
+<section class="entry" id="entry" aria-label="ورود به دعوت‌نامه">
+  <div class="entry-card">
+    <div class="mini">به نام زیبایی و شکوه هنر ایرانی</div>
     <h1>فرش پازیریک</h1>
-    <p class="subtitle">آغاز فصلی تازه از زیبایی و اصالت</p>
-    <div class="rule"></div>
-    <p class="invite">با افتخار از شما دعوت می‌کنیم تا در مراسم افتتاحیه شعبه جدید ما حضور به‌هم رسانید و با قدم‌های پرمهرتان، روشنی‌بخش آغاز این مسیر باشید.</p>
-    <div class="branch">افتتاحیه شعبه سوم</div>
-    <div class="kicker">نورآباد ممسنی</div>
-    <div class="date">دوشنبه ۹ آذر ۱۴۰۵</div>
-    <div class="time">از ساعت ۱۶ الی ۱۸</div>
-    <div class="rule"></div>
-    <div class="manager">مدیریت: حمید زارع</div>
-    <div class="address">نورآباد ممسنی، خیابان طالقانی<br>روبه‌روی پست بانک</div>
-    <div class="actions">
-      <a href="https://www.google.com/maps/search/?api=1&query=%D9%86%D9%88%D8%B1%D8%A2%D8%A8%D8%A7%D8%AF+%D9%85%D9%85%D8%B3%D9%86%DB%8C+%D8%AE%DB%8C%D8%A7%D8%A8%D8%A7%D9%86+%D8%B7%D8%A7%D9%84%D9%82%D8%A7%D9%86%DB%8C+%D8%B1%D9%88%D8%A8%D9%87%E2%80%8C%D8%B1%D9%88%DB%8C+%D9%BE%D8%B3%D8%AA+%D8%A8%D8%A7%D9%86%DA%A9" target="_blank" rel="noopener">مشاهده مسیر</a>
-      <button class="music" id="musicBtn" type="button">♫ پخش موسیقی</button>
+    <p>با افتخار از شما دعوت می‌کنیم<br>در جشن افتتاحیه شعبه سوم همراه ما باشید.</p>
+    <button class="enter" id="enterBtn">لمس کنید و وارد شوید</button>
+    <div class="footer">یک دیدار، آغاز یک همراهی زیبا</div>
+  </div>
+</section>
+
+<main id="main">
+  <article class="invite">
+    <div class="content">
+      <div class="top-ornament">❖ ✦ ❖</div>
+      <div class="kicker">دعوت‌نامه رسمی افتتاحیه</div>
+      <h1 class="brand">فرش پازیریک</h1>
+      <p class="branch">افتتاحیه شعبه سوم · نورآباد ممسنی</p>
+      <div class="rule"></div>
+      <p class="invite-text">
+        به نام هنر، اصالت و زیبایی<br>
+        خرسندیم آغاز فصلی تازه از همراهی را جشن بگیریم.<br>
+        حضور ارزشمند شما،<br>
+        <strong>شکوه‌بخش محفل افتتاحیه ما خواهد بود.</strong>
+      </p>
+      <div class="date">
+        <div class="day">دوشنبه · ۹ آذر ۱۴۰۵</div>
+        <div class="time">ساعت ۱۶ الی ۱۸</div>
+      </div>
+      <div class="details">
+        <div class="detail"><span class="symbol">⌖</span><div><small>نشانی مراسم</small><strong>نورآباد ممسنی، خیابان طالقانی، روبه‌روی پست بانک</strong></div></div>
+        <div class="detail"><span class="symbol">◷</span><div><small>زمان برگزاری</small><strong>دوشنبه، از ساعت ۱۶ تا ۱۸</strong></div></div>
+      </div>
+      <div class="manager"><span>با مدیریت</span>حمید زارع</div>
+      <div class="rule"></div>
+      <div class="actions">
+        <a class="action primary" href="https://www.google.com/maps/search/?api=1&query=نورآباد+ممسنی+خیابان+طالقانی+روبه‌روی+پست+بانک" target="_blank" rel="noopener">مسیریابی مراسم ↗</a>
+        <a class="action" href="https://www.google.com/maps/search/?api=1&query=نورآباد+ممسنی+خیابان+طالقانی+روبه‌روی+پست+بانک" target="_blank" rel="noopener">مشاهده نشانی</a>
+      </div>
+      <div class="footer">منتظر دیدار گرمتان هستیم</div>
+      <div class="top-ornament" style="margin-top:18px">❖ ✦ ❖</div>
     </div>
-    <div class="foot">حضور ارزشمند شما، افتخار ماست</div>
-  </section>
+  </article>
 </main>
-<audio id="bgMusic" loop preload="none" src="music.mp3"></audio>
+
+<button class="music" id="musicBtn" aria-label="پخش یا توقف موسیقی" title="موسیقی">♫</button>
+<audio id="bgMusic" preload="auto" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
 <script>
-const audio=document.getElementById('bgMusic'),btn=document.getElementById('musicBtn');
-btn.addEventListener('click',async()=>{
-  if(audio.paused){
-    try{await audio.play();btn.textContent='Ⅱ توقف موسیقی'}
-    catch(e){btn.textContent='فایل موسیقی اضافه نشده';}
-  }else{audio.pause();btn.textContent='♫ پخش موسیقی'}
+const entry = document.getElementById('entry');
+const main = document.getElementById('main');
+const audio = document.getElementById('bgMusic');
+const musicBtn = document.getElementById('musicBtn');
+let playing = false;
+
+document.getElementById('enterBtn').addEventListener('click', async () => {
+  entry.classList.add('hidden');
+  main.classList.add('visible');
+  musicBtn.classList.add('show');
+  try {
+    await audio.play();
+    playing = true;
+    musicBtn.textContent = '♫';
+    musicBtn.title = 'توقف موسیقی';
+  } catch (e) {
+    playing = false;
+    musicBtn.textContent = '▶';
+    musicBtn.title = 'پخش موسیقی';
+  }
 });
+
+musicBtn.addEventListener('click', async () => {
+  if (playing) {
+    audio.pause();
+    playing = false;
+    musicBtn.textContent = '▶';
+    musicBtn.title = 'پخش موسیقی';
+  } else {
+    try {
+      await audio.play();
+      playing = true;
+      musicBtn.textContent = '♫';
+      musicBtn.title = 'توقف موسیقی';
+    } catch (e) {
+      musicBtn.textContent = '▶';
+    }
+  }
+});
+audio.addEventListener('pause', () => { if (!audio.ended) { playing = false; musicBtn.textContent = '▶'; } });
+audio.addEventListener('play', () => { playing = true; musicBtn.textContent = '♫'; });
 </script>
 </body>
 </html>
